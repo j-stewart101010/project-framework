@@ -1,0 +1,91 @@
+/**	This stylesheet has been precompiled with SASS - do not edit style.css directly. */
+
+@import 'reset.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+@import 'header.scss';
+@import 'common.scss';
+@import 'content.scss';
+@import 'footer.scss';
+@import 'modal.scss';
+@import 'intro.scss';
+
+body {
+	background: #222 url(images/base/body-bg.png);
+	&.loading #wrap {
+		background: transparent url(images/base/loading.gif) no-repeat center;
+	}
+	&.transitioning #outer,
+	&.loading #outer,
+	&.loading #main {
+		background: none;
+	}
+}
+
+#wrap {
+	width: $main-width;
+	margin: 0 auto;
+}
+
+#outer {
+	height: 594px;
+	padding: 24px 0;
+	margin-top: -24px;
+	position: relative;
+	z-index: 0;
+	background-image: url(images/base/outer-bg.png);
+}
+
+#main {
+	height: 578px;
+	padding: 8px;
+	position: relative;
+	background: #000;
+}
+
+
+// Transition styles
+#outer.flip {
+	background: none;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+	perspective: 1000px;
+	
+	#main {
+		-webkit-transform-style: preserve-3d;
+		-webkit-transition: all 0.5s linear;
+		-moz-transform-style: preserve-3d;
+		-moz-transition: all 0.5s linear;
+		-o-transform-style: preserve-3d;
+		-o-transition: all 0.5s linear;
+		-ms-transform-style: preserve-3d;
+		-ms-transition: all 0.5s linear;
+		transform-style: preserve-3d;
+		transition: all 0.5s linear;
+
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		
+		#introduction {
+			box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		#content {
+			box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+		}
+	}
+}
+
+.section.flip,
+#introduction.flip {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}

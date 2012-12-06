@@ -1,0 +1,139 @@
+// Modal window
+.modal {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	height: 520px;
+	
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: 0.5;
+		filter: Alpha(Opacity=50);
+	}
+	
+	.window {
+		position: absolute;
+		z-index: 3;
+		top: 80px;
+		left: 222px;
+		width: 502px;
+		height: 424px;
+		padding: 17px 0 0 0;
+		background: transparent url(images/base/modal-bg.png) no-repeat;
+		
+		.video {
+			position: absolute;
+			z-index: 2;
+			top: -103px;
+			width: 205px;
+			height: 218px;
+			left: 50%;
+			margin-left: -103px;
+			cursor: pointer;
+			
+			video, object, embed {
+				display: block;
+				position: absolute;
+				width: 175px;
+				height: 175px;
+				z-index: 1;
+				top: 15px;
+				left: 15px;
+			}
+			
+			.frame {
+				position: absolute;
+				top: 0;
+				z-index: 3;
+				width: 100%;
+				height: 100%;
+				background: transparent url(images/base/video-frame.png);
+				
+				.play {
+					@include image-replacement;
+					width: 175px;
+					height: 175px;
+					position: absolute;
+					top: 15px;
+					left: 15px;
+				}
+			}
+			
+			.me-cannotplay {
+				display: none;
+			}
+			
+			&.paused .play {
+				background: transparent url(images/base/video-play.png) no-repeat center;
+			}
+		}
+		
+		/*
+		.frame {
+			width: 175px;
+			height: 175px;
+			padding: 15px 15px 28px 15px;
+			position: absolute;
+			z-index: 3;
+			top: -103px;
+			left: 50%;
+			margin-left: -101px;
+			background: transparent url(images/base/modal-frame.png);
+			
+			.video {
+				height: 100%;
+				overflow: hidden;
+				border-radius: 87px;
+			}
+		}
+		*/
+		
+		.content {
+			width: 493px;
+			height: 403px;
+			position: relative;
+			background: #000 url(images/base/modal-content.jpg);
+			
+			.inner {
+				padding: 100px 53px 0 53px;
+				
+				.steps {
+					position: relative;
+					height: 266px;
+					
+					.step {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+					}
+				}
+				
+				.title {
+					width: 384px;
+					font: 24px $font-titlebold;
+					color: #c6b989;
+					text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+					margin-bottom: 4px;
+				}
+				img {
+					margin: 6px 0;
+				}
+				p.action {
+					position: absolute;
+					width: 100%;
+					bottom: 0;
+					text-align: center;
+					padding-top: 0.8em;
+				}
+			}
+		}
+	}
+}
+

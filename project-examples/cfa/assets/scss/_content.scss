@@ -1,0 +1,364 @@
+
+// Main content area 
+#content {
+	width: $content-width;
+	height: $content-height;
+	position: relative;
+	z-index: 1;
+}
+
+
+// Content sections
+#content div.section {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	
+	&.splash {
+		width: $main-width;
+		height: $main-height;
+		top: -8px;
+		left: -8px;
+	}
+	
+	div.subsection {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		
+		.pages {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: absolute;
+			top: 58px;
+			left: 0;
+			
+			.page {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: $content-width;
+				height: $content-height;
+				background: #000;
+				
+				.tab {
+					width: 37px;
+					height: 520px;
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					background: transparent url(images/base/content-tab.png) repeat-y top left;
+					
+					border-radius: 3px;
+					text-shadow: 1px 0 0 rgba(0, 0, 0, 0.5);
+					
+					.title {			
+						width: 500px;
+						margin: 260px 0 0 -232px;
+						font: 15px $font-subtitle;
+						text-align: right;
+						text-transform: uppercase;
+						color: #666666;
+						-moz-transform: rotate(270deg);
+						-webkit-transform: rotate(270deg);
+						-ms-transform: rotate(270deg);
+					}
+					
+					.number {
+						display: block;
+						width: 100%;
+						position: absolute;
+						left: 0;
+						bottom: 5px;
+						font: 18px $font-subtitle;
+						text-align: center;
+						color: #666666 ;
+					}
+				}
+				&.active .tab {
+					background-position: top right;
+					.title {
+						color: #fff;
+					}
+					.number {
+						color: #fff;
+						text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+					}
+				}
+				
+				.content {
+					position: relative;
+					z-index: 0;
+					height: 100%;
+					margin-left: 45px;
+					
+					.inner {
+						background: #000 url(images/base/content-bg.png) no-repeat top right;
+						height: 100%;
+						padding: 55px 0;
+					}
+				}
+				&.active .inner {
+					background-position: top left;
+				}
+				
+				a.next, a.back {
+					@include image-replacement;
+					width: 36px;
+					height: 73px;
+					position: absolute;
+					z-index: 2;
+					top: 50%;
+					right: 15px;
+					margin-top: -37px;
+					background: transparent url(images/base/content-next.png) no-repeat 0 0;
+					&:hover, &:focus {
+						background-position: 0 -80px;
+					}
+				}
+			}
+		}
+		&.under-modal {
+			.pages .page {
+				.content .inner {
+					visibility: hidden;
+				}			
+			}
+		}
+	}
+}
+
+
+// Content within tabs
+#content .section .subsection .pages .page {
+	
+	// Did you know callout
+	div.callout {
+		width: 240px;
+		position: absolute;
+		left: 46px;
+		
+		div.inner {
+			padding: 20px;
+			min-height: 220px;
+			background: transparent url(images/base/content-highlight.png) no-repeat top;
+			
+			.video {
+			     position: relative;
+			     width: 175px;
+			     margin: -63px auto 20px auto;
+			
+    			.frame {
+        			background: url(images/base/video-frame-mask.png) no-repeat 0 0;
+        			position: absolute;
+        			top: 0;
+        			left: 0;
+        			width: 175px;
+        			height: 175px;
+    			}
+            }
+		}
+		div.bottom {
+			height: 14px;
+			background: transparent url(images/base/content-highlight.png) no-repeat bottom;
+		}
+		
+		.title {
+			font: 13px $font-subtitle;
+			margin-bottom: 0.4em;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		p.fact {
+			font: 16px $font-title;
+			margin-bottom: 1.0em;
+			span {
+				display: block;
+				margin: -4px 0 0 -2px;
+				font-size: 95px;
+				line-height: 85px;
+				&.number {
+					display: inline;
+					color: #b3a570;
+				}
+				&.percent {
+					display: inline;
+					color: #a3a3a3;
+				}
+			}
+		}
+		p {
+			em {
+				@include emphasised;
+			}
+		}
+	}
+	
+	// Main content
+	div.main {
+		width: 50%;
+		position: absolute;
+		left: 327px;
+		
+		div.inner {
+			padding: 0;
+			background: none;
+			
+			p, ul {
+			 width: 90%;
+            }
+		}
+		
+		.title {
+			font: 26px $font-title;
+			text-transform: uppercase;
+			line-height: 1.1em;
+			padding-top: 142px;
+			margin-bottom: 0.5em;
+			background-position: top left;
+			background-repeat: no-repeat;
+		}
+		
+		a {
+			color: #B3A570;
+			text-decoration: underline;
+		}
+	}
+}
+
+// Content header images
+#ember-attack #embers-facts .main .title {
+	background-image: url(images/content/title-ember-attack.png);
+}
+#radiant-heat #radiant-heat-facts .main .title {
+	background-image: url(images/content/title-radiant-heat.png);
+}
+#fire-danger-rating #fire-danger-rating-facts .main .title {
+	background-image: url(images/content/title-fire-danger-rating.png);
+}
+#fire-spread #fire-spread-facts .main .title {
+	background-image: url(images/content/title-fire-spread-01.png);
+}
+#topography #topography-facts .main .title {
+	background-image: url(images/content/title-topography.png);
+}
+#awareness #awareness-plan .main .title {
+	background-image: url(images/content/title-awareness-01.png);
+}
+#awareness #awareness-leave .main .title {
+	background-image: url(images/content/title-awareness-02.png);
+}
+#awareness #awareness-prepare .main .title {
+	background-image: url(images/content/title-awareness-03.png);
+}
+#awareness #awareness-warning .main .title {
+	background-image: url(images/content/title-awareness-04.png);
+}
+#resources #resources-list .main .title {
+	background-image: url(images/content/title-resources.png);
+}
+
+
+// Tabbed content - fullscreen game
+#content .section .subsection .game {
+	position: absolute;
+	top: 58px;
+	left: 0;
+	background: #000;
+	width: $content-width;
+	height: $content-height;
+	z-index: 9;
+	
+	.loading {
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #000 url(images/base/loading.gif) no-repeat center;
+	}
+	
+	iframe {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	
+}
+
+// Tabbed content - heading
+#content .section .subsection .heading {
+	height: 50px;
+	margin: 0 0 8px 2px;
+	position: relative;
+	background: #000 url(images/base/heading.png) repeat-x 0 0;
+	border-radius: 0 3px 3px 0;
+	
+	.inner {
+		margin-left: -4px;
+		background: transparent url(images/base/heading.png) no-repeat 0 -65px;
+		
+		.title {
+			padding: 17px 60px;
+			background: transparent url(images/base/heading.png) no-repeat;
+			font: 24px $font-titlebold;
+			line-height: 15px;
+			text-transform: uppercase;
+			text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+			color: #bfbfbf;
+		}
+		
+		.close {
+			@include image-replacement;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: transparent url(images/base/heading.png) no-repeat 0 -125px;
+			&:hover, &:focus {
+				background-position: 0 -185px;
+			}
+		}
+	}	
+}
+body.risk #content .section .subsection .heading .title {
+	background-position: -4px -244px;
+}
+body.behaviour #content .section .subsection .heading .title {
+	background-position: -4px -304px;
+}
+body.safety #content .section .subsection .heading .title {
+	background-position: -4px -364px;
+}
+
+
+// General content
+#content {
+	p, ul, ol {
+		font-size: 1em;
+		line-height: 1.2em;
+		margin-bottom: 0.6em;
+	}
+	ul {
+		li {
+			margin-bottom: 0.5em;
+			padding-left: 14px;
+			background: transparent url(images/base/li.png) no-repeat 0 3px;
+		}
+	}
+}
+
+
+
+
+
+

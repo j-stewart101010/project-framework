@@ -1,0 +1,23 @@
+$main-width: 960px;
+$main-height: 594px;
+$content-width: 944px;
+$content-height: 520px;
+$game-width: 944px;
+$game-height: 520px;
+$font-default: 'Arial', 'Helvetica', sans-serif;
+$font-title: 'ClarendonBT-Roman', 'Georgia', serif;
+$font-titlebold: 'ClarendonBT-Bold', 'Georgia', serif;
+$font-subtitle: 'Nevis', 'Arial', 'Helvetica', sans-serif;
+
+@mixin image-replacement {
+	display: block;
+	overflow: hidden;
+	text-indent: -999em;
+	background-repeat: no-repeat;
+}
+
+@mixin emphasised {
+	font-style: normal;
+	text-transform: uppercase;
+	color: #ff7377;
+}

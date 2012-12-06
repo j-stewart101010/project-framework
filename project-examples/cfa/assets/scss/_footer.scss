@@ -1,0 +1,250 @@
+#footer {
+	width: $main-width + 4px;
+	height: 70px;
+	margin-top: -37px;
+	margin-left: -2px;
+	position: relative;
+	z-index: 1;
+	background-image: url(images/base/footer-bg.png);
+	
+	.navigation {
+		
+		.section, {
+			position: absolute;
+			/*overflow: hidden;*/
+			background-image: url(images/base/footer-nav.png);
+			
+			&:hover, &:focus {
+				overflow: visible;
+			}
+			
+			&.risk, &.behaviour, &.safety {
+				width: 60px;
+				height: 60px;
+				bottom: 5px;
+			}
+			
+			&.risk {
+				left: 392px;
+				background-position: 0 0;
+				.title {
+					background-position: -132px -15px;
+				}
+			}
+			
+			&.behaviour {
+				left: 452px;
+				background-position: 0 -60px;
+				.title {
+					background-position: -132px -75px;
+				}
+			}
+			
+			&.safety {
+				left: 512px;
+				background-position: 0 -120px;
+				.title {
+					background-position: -132px -135px;
+				}
+			}
+			
+
+			&.home {
+				width: 60px;
+				height: 40px;
+				bottom: 13px;
+				left: 15px;
+				background-position: 0 -189px;
+				&:hover, &:focus, &.active {
+					background-position: -60px -189px;
+				}
+			}
+			
+			a {
+				display: block;
+				height: 100%;
+				overflow: hidden;
+				text-indent: -999px;
+			}
+			
+			.submenu {
+				width: 210px;
+				position: absolute;
+				z-index: 999;
+				visibility: hidden;
+				top: 0;
+				left: -74px;
+				/*left: -9999px;*/
+				padding-bottom: 15px;
+				background: transparent url(images/base/footer-submenu.png) no-repeat bottom;
+				cursor: default;
+				
+				.inner {
+					padding: 0 6px 6px 6px;
+					background: #555 url(images/base/footer-submenu.png) repeat-x top;
+					box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+					border-radius: 3px;
+					
+					.title {
+						padding: 0 0 11px 36px;
+						margin: 0 0 0 -5px;
+						font: 14px $font-titlebold;
+						text-transform: uppercase;
+						background-image: url(images/base/footer-nav.png);
+						background-repeat: no-repeat;
+						
+						// Dropshadow & glow
+						span {
+							display: block;
+							position: absolute;
+							top: 5px;
+							left: auto;
+							&.text {
+								z-index: 1;
+								color: #fff;
+							}
+							&.shadow {
+								z-index: 0;
+								margin-top: 1px;
+								color: #111;
+								text-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+							}
+						}
+					}
+					
+					ul {
+						padding: 1px 9px;
+						background: #d5d5d5;
+						border-radius: 2px;
+						
+						li {
+							position: relative;
+							background: transparent url(images/base/footer-nav.png) no-repeat -24px -316px;
+							border-top: 1px solid #c4c4c4;
+							border-bottom: 1px solid #ddd;
+							&:first-child {
+								border-top: none;
+							}
+							&:last-child {
+								border-bottom: none;
+							}
+							&.complete {
+								background-position: -24px -375px;
+							}
+							
+							a {
+								display: block;
+								padding: 6px 6px 6px 22px;
+								text-indent: 0;
+								font: 12px $font-subtitle;
+								text-transform: uppercase;
+								color: #111;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		// Volume slider
+		.volume {
+			position: absolute;
+			overflow: visible;
+			right: 25px;
+			bottom: 13px;
+			width: 40px;
+			height: 40px;
+			background-image: url(images/base/footer-nav.png);
+			background-position: -10px -250px;
+			
+			a {
+				display: none;
+			}
+			
+			.volume-slider {
+				visibility: hidden;
+				position: relative;
+				z-index: 2;
+				width: 37px;
+				height: 174px;
+				margin-top: -136px;
+				margin-left: -1px;
+				border-right: 1px solid #292929;
+				background: #333 url(images/base/volume.png) no-repeat 0 0;
+				border-radius: 3px 3px 0 0;
+				
+				a {
+					display: block;
+				}
+				
+				#volume-slider {
+					position: absolute;
+					top: 35px;
+					left: 14px;
+					width: 7px;
+					height: 103px;
+					background: #262626;
+					border: 1px solid #1a1a1a;
+					border-radius: 5px;
+					
+					.ui-slider-handle {
+						position: absolute;
+						z-index: 2;
+						width: 42px;
+						height: 42px;
+						margin: 0 0 -20px -18px;
+						background: transparent url(images/base/volume.png) no-repeat -69px -9px;
+						outline: none;
+					}
+					.ui-slider-range {
+						position: absolute;
+						z-index: 1;
+						bottom: 0;
+						width: 100%;
+						background: transparent url(images/base/volume.png) repeat-y -146px 0;
+						border-radius: 3px;
+					}
+				}
+				
+				.volume-set {
+					@include image-replacement;
+					width: 16px;
+					height: 16px;
+					position: absolute;
+					left: 11px;
+					background-image: url(images/base/volume.png);
+					&.max {
+						top: 10px;
+						background-position: -203px -22px;
+					}
+					&.min {
+						bottom: 10px;
+						background-position: -263px -22px;
+					}
+				}				
+			}
+			&:hover .volume-slider {
+				display: block;
+			}
+		}
+	}
+}
+
+// Active states
+#footer .navigation .risk:hover,
+#footer .navigation .risk:focus,
+.risk #footer .navigation .risk {
+	background-position: -60px 0;
+}
+
+#footer .navigation .behaviour:hover,
+#footer .navigation .behaviour:focus,
+.behaviour #footer .navigation .behaviour {
+	background-position: -60px -60px;
+}
+
+#footer .navigation .safety:hover,
+#footer .navigation .safety:focus,
+.safety #footer .navigation .safety {
+	background-position: -60px -120px;
+}

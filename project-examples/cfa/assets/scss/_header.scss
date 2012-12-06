@@ -1,0 +1,71 @@
+#header {
+	height: 58px;
+	position: relative;
+	z-index: 1;
+	background: transparent url(images/base/header-bg.png) no-repeat 26px 0;
+	
+	.fr-logo {
+		@include image-replacement;
+		width: 132px;
+		height: 25px;
+		position: absolute;
+		top: 22px;
+		left: 26px;
+		background-image: url(images/base/fr-logo.png);
+	}
+	
+	.navigation {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font: 11px $font-subtitle;
+		
+		li {
+			float: left;
+			padding: 12px 12px 12px 0;
+			margin-right: 10px;
+			background: transparent url(images/base/header-nav.png) no-repeat right 0;
+			text-transform: uppercase;
+			color: #858585;
+			
+			a {
+				color: #858585;
+				text-decoration: none;
+				&:hover, &:focus {
+					color: #ff7377;
+				}
+			}
+			
+			&.accessibility {
+				a {
+					padding-left: 2px;
+					&.on {
+						color: #b2b2b2;
+					}
+					&.off {
+						color: #ff7377;
+					}
+				}
+			}
+			
+			&.social {
+				background: none;
+				margin-right: 0;
+				padding-right: 0;
+				a {
+					@include image-replacement;
+					width: 14px;
+					height: 14px;
+					margin-right: 6px;
+					background-image: url(images/base/header-nav.png);
+					&.fbook {
+						background-position: 0 -50px;
+					}
+					&.twitter {
+						background-position: 0 -100px;
+					}
+				}
+			}
+		}
+	}
+}

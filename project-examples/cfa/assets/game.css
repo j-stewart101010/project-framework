@@ -1,0 +1,223 @@
+/**	This stylesheet has been precompiled with SASS - do not edit style.css directly. */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+body { font: 13px/1.231 sans-serif; *font-size: small; }
+
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color: #607890; }
+
+a:hover { color: #036; }
+
+ul, ol { margin-left: 2em; }
+
+ol { list-style-type: decimal; }
+
+nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
+
+small { font-size: 85%; }
+
+b, strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+
+button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
+
+textarea { overflow: auto; vertical-align: text-top; }
+
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+input::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
+
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+ul, ol, li { margin: 0; padding: 0; list-style-type: none; }
+
+body { font: 14px 'Arial', 'Helvetica', sans-serif; color: #fff; }
+
+@font-face { font-family: 'Nevis'; src: url("fonts/nevis-webfont.eot"); src: url("fonts/nevis-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/nevis-webfont.woff") format("woff"), url("fonts/nevis-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'ClarendonBT-Roman'; src: url("fonts/176B99_0.eot"); src: url("fonts/176B99_0.eot?#iefix") format("embedded-opentype"), url("fonts/176B99_0.woff") format("woff"), url("fonts/176B99_0.ttf") format("truetype"); }
+
+@font-face { font-family: 'ClarendonBT-Bold'; src: url("fonts/176B99_1.eot"); src: url("fonts/176B99_1.eot?#iefix") format("embedded-opentype"), url("fonts/176B99_1.woff") format("woff"), url("fonts/176B99_1.ttf") format("truetype"); }
+
+a { text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; cursor: pointer; }
+
+a.button { display: inline-block; padding: 7px 35px 3px 25px; height: 18px; border-radius: 4px; box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); font: 11px "Nevis", "Arial", "Helvetica", sans-serif; line-height: 12px; text-transform: uppercase; color: #fff; }
+a.button span { display: inline-block; padding-left: 16px; background: transparent url(images/base/button-bg.png) no-repeat 0 -202px; }
+a.button.skip span { padding-left: 18px; background-position: 0 -262px; }
+a.button.pink { background: #8f171e url(images/base/button-bg.png) repeat-x 0 0; }
+a.button.pink:hover, a.button.pink:focus { background-position: 0 -60px; }
+a.button.pink:active { background-position: 0 -120px; }
+
+html, body { width: 100%; height: 100%; overflow: hidden; }
+
+body { background: #000; }
+
+#wrap, #main, #background, #controls { width: 944px; height: 520px; }
+
+#main { position: relative; z-index: 1; overflow: hidden; }
+
+#background { position: absolute; z-index: 0; top: 0; left: 0; }
+#background img { display: block; width: 100%; height: 100%; }
+#background .canvas { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 3; }
+#background .video { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1; }
+#background .image { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 2; }
+#background #view-side { visibility: visible; }
+#background #view-top { visibility: hidden; }
+
+#controls { position: absolute; z-index: 3; top: 0; left: 0; }
+#controls .gui, #controls .ui-slider-handle, #controls .ui-slider-range { background-color: transparent; background-image: url(images/games/game-ui.png); }
+#controls .next { display: block; overflow: hidden; text-indent: -999em; background-repeat: no-repeat; width: 66px; height: 25px; background-position: -5px -240px; position: absolute; z-index: 2; top: 14px; right: 14px; }
+#controls .next:hover, #controls .next:focus { background-position: -5px -275px; }
+#controls .panel { position: absolute; top: 444px; height: 54px; background-position: top left; border-radius: 7px; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); }
+#controls .panel .control { position: absolute; top: 0; padding-top: 6px; padding-left: 8px; padding-right: 8px; }
+#controls .panel .control .title { font: 8px "Nevis", "Arial", "Helvetica", sans-serif; text-transform: uppercase; text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); color: #fff; }
+#controls .panel .control .switch { display: block; overflow: hidden; text-indent: -999em; background-repeat: no-repeat; margin-left: auto; margin-right: auto; }
+#controls .panel .control .switch.view { width: 109px; height: 29px; margin-top: 3px; margin-left: -2px; background-position: -2px -176px; }
+#controls .panel .control .switch.view.active { background-position: -2px -207px; }
+#controls .compass { position: absolute; width: 143px; height: 70px; top: 10px; left: 10px; background-position: -240px -120px; }
+#controls .compass .value { position: absolute; top: 27px; left: 74px; font: 10px "Nevis", "Arial", "Helvetica", sans-serif; line-height: 10px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); color: #fff; }
+#controls .counter { width: 143px; height: 28px; position: absolute; top: 23px; right: 12px; background-position: -257px -240px; }
+#controls .counter .title { width: 50px; margin: 10px 0 0 5px; font: 8px "Nevis", "Arial", "Helvetica", sans-serif; line-height: 8px; text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); color: #fff; }
+#controls .counter .value { position: absolute; top: 6px; left: 60px; font: 14px "Arial", "Helvetica", sans-serif; line-height: 14px; font-weight: bold; color: #fff; text-shadow: 0 0 6px rgba(255, 255, 255, 0.5); }
+#controls .counter .value span { display: inline-block; width: 20px; text-align: center; }
+
+.modal { width: 230px; margin: 140px auto 0 auto; padding: 8px; background: #000; }
+.modal .inner { padding: 13px; background: #333333 url(images/games/game-settings-bg.png) repeat-x top; border-style: solid; border-color: #666; border-width: 1px 0 0 1px; border-radius: 2px; }
+.modal .inner .title-large { color: #c6b989; text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5); }
+.modal .inner .title-small { color: #fff; text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5); }
+
+#scratch img, #scratch canvas { display: block; }
+
+body.radiantheat #controls .panel { left: 50%; width: 245px; margin-left: -123px; }
+body.radiantheat #controls .panel .control { width: 110px; }
+body.radiantheat #controls .panel .control.thermal { left: 0; width: 105px; padding-right: 14px; background: transparent url(images/games/game-ui-sep.png) no-repeat right 5px; }
+body.radiantheat #controls .panel .control.view { right: 0; width: 105px; }
+body.radiantheat #controls .panel .control .switch.thermal { width: 110px; height: 38px; margin-top: -2px; background-position: -4px -71px; }
+body.radiantheat #controls .panel .control .switch.thermal.active { background-position: -4px -131px; }
+body.radiantheat #controls .slider { position: absolute; top: 93px; right: 30px; width: 59px; height: 341px; background-position: -150px -120px; }
+body.radiantheat #controls .slider #thermometer-slider { position: absolute; top: 45px; left: 24px; width: 12px; height: 258px; }
+body.radiantheat #controls .slider #thermometer-slider .ui-slider-handle { display: block; position: absolute; width: 80px; height: 24px; background-position: -20px -303px; margin-left: -34px; margin-bottom: -10px; outline: none; }
+body.radiantheat #controls .slider #thermometer-slider .ui-slider-handle:hover { background-position: -20px -333px; }
+body.radiantheat #controls .slider #thermometer-slider .ui-slider-range { display: block; position: absolute; bottom: 0; width: 100%; padding-top: 2px; background-position: -234px bottom; }
+body.radiantheat #controls .slider #thermometer-slider.top .ui-slider-range { padding-top: 12px; }
+body.radiantheat #background .view { height: 100%; }
+body.radiantheat #background .view .background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+body.radiantheat #background .view .background img { display: block; position: absolute; top: 0; left: 0; }
+body.radiantheat #background .view #fire-bush-side { position: absolute; left: 0; bottom: 0; width: 320px; height: 300px; }
+
+body.emberattack #controls .next { top: auto; bottom: 14px; }
+body.emberattack #controls .panel { left: 50%; margin-left: -61px; width: 122px; }
+body.emberattack .modal { display: none; width: 270px; }
+body.emberattack .modal .inner .title-large { font: 40px "ClarendonBT-Roman", "Georgia", serif; line-height: 20px; margin-bottom: 1em; }
+body.emberattack .modal .inner .title-small { font: 17px "ClarendonBT-Bold", "Georgia", serif; line-height: 17px; margin-bottom: 1em; }
+body.emberattack .modal .inner .button { width: 83px; padding-left: 15px; padding-right: 15px; }
+body.emberattack .modal .inner .button.skip { float: right; }
+body.emberattack #background .view { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+body.emberattack #background #tree-fire { position: absolute; z-index: 9; top: 0; left: 0; width: 325px; height: 450px; }
+body.emberattack #background #roof-fire { position: absolute; z-index: 9; top: 141px; left: 456px; width: 300px; height: 200px; }
+
+body.topography #controls .slider { position: absolute; top: 74px; left: 766px; width: 77px; height: 394px; background-position: -422px -120px; }
+body.topography #controls .slider #topography-slider { position: absolute; top: 60px; left: 32px; width: 12px; height: 305px; }
+body.topography #controls .slider #topography-slider .ui-slider-handle { display: block; position: absolute; width: 97px; height: 25px; background-position: -12px -362px; margin-left: -42px; outline: none; }
+body.topography #controls .slider #topography-slider .ui-slider-handle:hover { background-position: -12px -392px; }
+body.topography #controls .slider #topography-slider .ui-slider-range { display: none; }
+body.topography #background .background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+body.firespread #controls .next { top: auto; bottom: 14px; }
+body.firespread #background .image { z-index: 1; }
+body.firespread #background .video { z-index: 2; }
+body.firespread .modal .inner .title-large { font: 24px "ClarendonBT-Bold", "Georgia", serif; line-height: 18px; margin-bottom: 0.5em; color: #c6b989; }
+body.firespread .modal .inner p.play { text-align: center; margin-bottom: 0; }
+body.firespread .modal .inner .slider { width: 202px; height: 52px; margin: 18px 0; background: transparent url(images/games/game-firespread-slider.png) 0 0; }
+body.firespread .modal .inner .slider #windspeed-slider { position: relative; width: 188px; }
+body.firespread .modal .inner .slider #windspeed-slider .ui-slider-handle { display: block; position: absolute; margin-top: -5px; margin-left: -6px; width: 25px; height: 26px; background: transparent url(images/games/game-firespread-slider.png) 0 -60px; }
+body.firespread .modal .inner .slider #windspeed-slider .ui-slider-range { position: absolute; height: 12px; background: transparent url(images/games/game-firespread-slider.png) 0 -100px; border: 1px solid #666; border-radius: 8px; }
+
+body.awareness #controls .panel { top: 10px; left: 50%; width: 475px; margin-left: -237px; }
+body.awareness #controls .panel .control { width: 100px; }
+body.awareness #controls .panel .control.temperature { left: 15px; }
+body.awareness #controls .panel .control.temperature .range { background: #ff982c; }
+body.awareness #controls .panel .control.humidity { left: 126px; }
+body.awareness #controls .panel .control.humidity .range { background: #ff60a5; }
+body.awareness #controls .panel .control.wind { left: 236px; }
+body.awareness #controls .panel .control.wind .range { background: #00c3de; }
+body.awareness #controls .panel .control.vegetation { left: 346px; }
+body.awareness #controls .panel .control.vegetation .range { background: #bae945; }
+body.awareness #controls .panel .control .slider { position: relative; height: 23px; margin-top: 5px; background-position: -10px -464px; }
+body.awareness #controls .panel .control .slider .slider-inner { position: absolute; width: 92px; height: 16px; top: 4px; left: 4px; }
+body.awareness #controls .panel .control .slider .slider-inner .ui-slider-handle { display: none; position: absolute; z-index: 2; width: 26px; height: 37px; top: 7px; margin-left: -12px; background-position: 0 -420px; }
+body.awareness #controls .panel .control .slider .slider-inner .range { position: absolute; z-index: 0; height: 100%; width: 50%; }
+body.awareness #controls .panel .control .slider .slider-inner .overlay { position: absolute; z-index: 1; top: -2px; left: -2px; width: 100px; height: 23px; background-position: -12px -495px; }
+body.awareness #controls #fdr { width: 250px; height: 150px; position: absolute; bottom: -18px; left: 50%; margin-left: -125px; background: transparent url("../games/assets/awareness/awareness-fdr.png") no-repeat 0 0; }
+body.awareness #controls #fdr .pointer { width: 100%; height: 100%; position: absolute; background: transparent url("../games/assets/awareness/awareness-fdr.png") no-repeat; }
+body.awareness #controls #fdr.low .pointer { background-position: 0 -165px; }
+body.awareness #controls #fdr.high .pointer { background-position: 0 -315px; }
+body.awareness #controls #fdr.vhigh .pointer { background-position: 0 -465px; }
+body.awareness #controls #fdr.severe .pointer { background-position: 0 -615px; }
+body.awareness #controls #fdr.extreme .pointer { background-position: 0 -765px; }
+body.awareness #controls #fdr.codered .pointer { background-position: 0 -915px; }
+body.awareness #background .background { position: absolute; top: 0; }
+
+body.dangerrating map area { cursor: default; }
+body.dangerrating #pointer { width: 364px; height: 200px; overflow: hidden; position: absolute; z-index: 2; top: 119px; left: 134px; background: transparent url(../games/assets/dangerrating/dangerrating-pointer.png) no-repeat 0 0; }
+body.dangerrating #pointer.low-moderate { background-position: 0 0; }
+body.dangerrating #pointer.high { background-position: 0 -200px; }
+body.dangerrating #pointer.very-high { background-position: 0 -400px; }
+body.dangerrating #pointer.severe { background-position: 0 -600px; }
+body.dangerrating #pointer.extreme { background-position: 0 -800px; }
+body.dangerrating #pointer.code-red { background-position: 0 -1000px; }
+body.dangerrating #ratings { position: absolute; top: 128px; left: 504px; }
+body.dangerrating #ratings .rating { position: absolute; z-index: 1; top: 0; width: 201px; height: 254px; padding: 18px 22px 22px 22px; box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.1); margin-left: 20px; }
+body.dangerrating #ratings .rating .title { font: 24px "ClarendonBT-Bold", "Georgia", serif; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5); margin-bottom: 0.2em; }
+body.dangerrating #ratings .rating ul { padding-left: 15px; }
+body.dangerrating #ratings .rating ul li { list-style-type: disc; line-height: 1.3em; margin-bottom: 0.6em; }
+body.dangerrating #ratings .rating.active { z-index: 2; }
+body.dangerrating #ratings #low-moderate { background: #9ad054; }
+body.dangerrating #ratings #high { background: #00c2f3; }
+body.dangerrating #ratings #very-high { background: #fff301; }
+body.dangerrating #ratings #severe { background: #f78a23; }
+body.dangerrating #ratings #extreme { background: #f03228; }
+body.dangerrating #ratings #code-red { background: #f2392d; }
+
+.hidden { width: 0; height: 0; overflow: hidden; }

@@ -1,0 +1,361 @@
+// Splash / intro pages
+
+body.home,
+body.enter {
+	
+	#main {
+		#content {		
+			.content {
+				height: 100%;
+				.inner {
+					position: relative;
+					z-index: 2;
+				}
+				.background {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					z-index: 1;
+				}
+			}
+		}
+		
+		.close {
+			@include image-replacement;
+			width: 66px;
+			height: 25px;
+			position: absolute;
+			top: 11px;
+			right: 11px;
+			z-index: 3;
+			background: transparent url(images/base/close-small.png);
+		}
+	}
+}
+
+#home {
+	
+	.inner {
+		width: 602px;
+		margin: 0 auto;
+		padding-top: 170px;	
+		
+		
+		.title {
+			font: 28px $font-titlebold;
+			line-height: 1.2em;
+			text-transform: uppercase;
+			text-align: center;
+			color: #a8a8a8;
+			text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+			margin-bottom: 1.0em;
+		}
+		
+		p {
+			font: 14px $font-subtitle;
+			text-transform: uppercase;
+			text-align: center;
+			margin-bottom: 2.3em;
+			em {
+				@include emphasised;
+			}
+		}
+		
+		#keys {
+			.key {
+				display: block;
+				float: left;
+				width: 58px;
+				height: 69px;
+				padding: 16px 0 0 27px;
+				margin: -15px -25px 0 0;
+				background: transparent url(images/elements/intro-keyboard-keys.png) no-repeat 0 0;
+				font-size: 19px;
+				text-transform: uppercase;
+				color: #373431;
+				cursor: pointer;
+				
+				&.down {
+					background-position: 0 -180px;
+				}
+				
+				&.enter {
+					width: 120px;
+					height: 150px;
+					background-position: -120px 0;
+					&.down {
+						background-position: -120px -180px;
+					}
+				}
+				
+				&.typed {
+					color: #d2222a;
+					text-shadow: 0 0 6px rgba(210, 34, 42, 0.5);
+				}
+			}				
+		}
+	}
+}
+
+#enter {
+	
+	// Set of navigation items
+	.navigation {
+		position: absolute;
+		z-index: 9;
+		top: 0;
+		left: 0;
+		
+		.title {
+			font: 25px $font-titlebold;
+			line-height: 25px;
+			padding: 18px 22px;
+			text-transform: uppercase;
+			
+			a {
+				text-decoration: none;
+				color: #a81b29;
+			}
+		}
+		
+		// Single nav item
+		.item {
+			position: absolute;
+			cursor: pointer;
+			margin: 0;
+			padding: 0;
+			background: none;
+			
+			.link {
+				position: relative;
+				z-index: 1;
+				left: 0;
+				margin: 68px 0 0 75px;
+				
+				a {
+					display: block;
+					position: relative;
+					z-index: 2;
+					top: 0;
+					left: 0;
+					padding-right: 40px;
+					background: transparent url(images/elements/enter-link.png) no-repeat right -50px;
+					font: 12px $font-titlebold;
+					line-height: 14px;
+					text-transform: uppercase;
+					text-decoration: none;
+					color: #a8a8a8;
+										
+					span {
+						display: block;
+						padding: 9px 0 9px 50px;
+						white-space: nowrap;
+						background: transparent url(images/elements/enter-link.png) no-repeat left 0;
+						em {
+							display: block;
+							font-style: normal;
+							font-size: 14px;
+							color: #d2cece;
+						}
+					}
+				}
+				
+				.shadow {
+					position: absolute;
+					z-index: 1;
+					width: 90%;
+					height: 40%;
+					top: 26%;
+					left: 2%;
+					background: transparent;
+					box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+				}
+				
+			}
+			
+			.images {
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+				
+				.sprites {
+					position: absolute;
+					top: 0;
+					left: 0;
+					
+					.sprite {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+
+						canvas, img.pnganim {
+							display: block;
+							position: relative;
+							z-index: 1;
+							width: 100%;
+							height: 100%;
+						}
+						
+						.icon {
+							position: absolute;
+							z-index: 2;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							img {
+								display: block;
+								width: 100%;
+								height: 100%;
+							}
+						}
+						
+						&.complete img {
+							display: block;
+							position: relative;
+							z-index: 1;
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+
+				.complete {
+					display: none;
+				}
+			}
+			
+			&:hover {
+				z-index: 999;
+			}
+			
+			// Complete items
+			&.complete {
+				.link {
+					a {
+						background-position: right -100px;
+					}
+				}
+			}
+		}
+		
+		// Other, nonactive sections
+		&.othersection {
+
+			.title {
+				display: none;
+			}
+		
+			.item {
+			
+				display: none;
+				&.complete {
+					// Tasks from other sections are displayed only if completed
+					display: block;
+					opacity: 0.8;
+					&:hover, &:focus {
+						opacity: 1;
+					}
+					
+					.link {
+						margin: 0;
+						a {
+							span {
+								padding-left: 55px;
+							}
+						}
+					}
+					
+					.images {
+						.sprites {
+							.sprite.incomplete {
+								display: none;
+							}
+							.sprite.complete {
+								display: block;
+							}
+						}				
+					}
+				}
+			}
+		}
+		
+		// Sprite positions
+		&.risk {
+			.item.ember-attack {
+				top: 80px;
+				left: 392px;
+			}
+			
+			.item.fire-danger-rating {
+				top: 330px;
+				left: 111px;
+			}
+			
+			.item.radiant-heat {
+				top: 330px;
+				left: 660px;
+			}
+		}
+		&.behaviour {
+			.item.fire-spread {
+				top: 20px;
+				left: 600px;
+			}
+			
+			.item.topography {
+				top: 333px;
+				left: 250px;
+			}
+		}
+		&.safety {
+			.item.awareness {
+				top: 120px;
+				left: 100px;
+			}
+			
+			.item.resources {
+				top: 400px;
+				left: 600px;
+			}
+		}
+	}
+	
+	.content {
+		.inner {
+		
+			width: 560px;
+			margin: 0 auto; 
+			padding-top: 220px;
+			
+			.title {
+				font: 28px $font-titlebold;
+				line-height: 1.2em;
+				text-transform: uppercase;
+				text-align: center;
+				color: #D4252D;
+				text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+				margin-bottom: 10px;
+			}
+			
+			p {
+				font: 18px $font-subtitle;
+				text-align: center;
+				margin-bottom: 2.3em;
+				em {
+					@include emphasised;
+				}
+			}
+			
+			.navigation {
+				display: none;
+			}
+			
+		}
+	}
+}
+

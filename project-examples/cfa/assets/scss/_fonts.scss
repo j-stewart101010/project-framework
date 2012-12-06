@@ -1,0 +1,30 @@
+body {
+	font: 14px 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+@font-face {
+    font-family: 'Nevis';
+    src: url('fonts/nevis-webfont.eot');
+    src: url('fonts/nevis-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nevis-webfont.woff') format('woff'),
+         url('fonts/nevis-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'ClarendonBT-Roman';
+	src: url('fonts/176B99_0.eot');
+	src: url('fonts/176B99_0.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/176B99_0.woff') format('woff'),
+		 url('fonts/176B99_0.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'ClarendonBT-Bold';
+	src: url('fonts/176B99_1.eot');
+	src: url('fonts/176B99_1.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/176B99_1.woff') format('woff'),
+		 url('fonts/176B99_1.ttf') format('truetype');
+}

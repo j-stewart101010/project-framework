@@ -1,0 +1,21 @@
+.ie7 {
+	
+	#footer .submenu {
+		ul {
+			zoom: 1;
+		}
+	}
+	
+}
+
+.lt-ie9 {
+
+	#content .tab {
+		.title {
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+			margin: 0 !important;
+			padding: 9px 18px 0 0;
+		}
+	}
+	
+}

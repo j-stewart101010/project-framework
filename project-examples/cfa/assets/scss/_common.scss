@@ -1,0 +1,41 @@
+
+a {
+	text-decoration: none;
+	&:hover, &:focus {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+// Button links
+a.button {
+	display: inline-block;
+	padding: 7px 35px 3px 25px;
+	height: 18px;
+	border-radius: 4px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	font: 11px $font-subtitle;
+	line-height: 12px;
+	text-transform: uppercase;
+	color: #fff;
+	
+	span {
+		display: inline-block;
+		padding-left: 16px;
+		background: transparent url(images/base/button-bg.png) no-repeat 0 -202px;
+	}
+	&.skip span {
+		padding-left: 18px;
+		background-position: 0 -262px;
+	}
+	
+	&.pink {
+		background: #8f171e url(images/base/button-bg.png) repeat-x 0 0;
+		&:hover, &:focus {
+			background-position: 0 -60px;
+		}
+		&:active {
+			background-position: 0 -120px;
+		}
+	}
+}
