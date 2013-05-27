@@ -1,0 +1,76 @@
+
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+
+/*Fonts*/
+
+@include font-face("LeagueGothicRegular",
+	font-files("LeagueGothic-Regular-webfont.woff", woff,
+		"LeagueGothic-Regular-webfont.ttf", ttf,
+		"LeagueGothic-Regular-webfont.svg", svg),
+		"LeagueGothic-Regular-webfont.eot");
+
+html, body {
+	background: none;
+}
+
+.container {
+  	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: LeagueGothicRegular;
+	text-transform: uppercase;
+}
+.masthead {
+	margin-top: -100px;
+	text-align: center;
+	font-size: 150px;
+}
+.textshadow .blurry-text {
+   color: transparent;
+   text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.hero-unit {
+	position: relative;
+	top: 50%;
+}
+
+.main-navigation {
+	@include no-bullets;
+
+	text-align: center;
+  	font-size: 50px;
+  	text-transform: uppercase;
+
+  	li {
+    	display: inline-block;
+    	position: relative;
+    	margin-left: 20px;
+    	top: -20px;
+	}
+
+	li:first-child {
+		margin-left: 0;
+	}		
+}
+
+.full-page-background { 
+	position:fixed; 
+	left:0; 
+	top:0; 
+	overflow:hidden;
+	z-index:-999;
+	height:100%;
+	width:100%;
+}
+.full-page-background img { 
+	width:auto;
+	height:auto;
+	position:relative;
+	outline:none;
+	border:none; 
+}
